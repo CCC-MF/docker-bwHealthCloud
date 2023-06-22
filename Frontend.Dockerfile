@@ -1,5 +1,5 @@
 # Build image
-FROM node:10-alpine AS builder
+FROM node:20-alpine AS builder
 
 # Change to latest release
 # Required for image build using local copy of zip file
@@ -38,9 +38,7 @@ RUN sed -i -r "s/^(\s*)port[^,]*(,?)/\1port: process.env.port || ':$BACKEND_PORT
 RUN npm run generate
 
 # Final image
-FROM node:10-alpine
-
-USER 999
+FROM node:20-alpine
 
 COPY --from=builder /bwhc-frontend /bwhc-frontend
 

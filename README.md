@@ -21,7 +21,7 @@ To build the image for bwHealthCloud frontend, use the following command
 docker build -t bwhc-frontend -f Frontend.Dockerfile .
 ```
 
-This will create the image using default build arguments and mark it as `bwhc-frontend`. To customize the build, spezify custom values.
+This will create the image using default build arguments and mark it as `bwhc-frontend`. To customize the build, specify custom values.
 
 * `VERSION`: The version to be used. Current value `2209`. Required for use with local release zip file.
 * `NUXT_HOST` and `NUXT_PORT`: Server configuration, see 2.3 of bwHC manual for more information.

@@ -6,9 +6,9 @@ The purpose of this project is to provide docker images for [bwHealthCloud](http
 
 Make sure that latest release files are in the project directory, as docker build will pick them up without downloading them.
 
-Currently frontend release file will be downloaded from [https://bwhealthcloud.de](https://bwhealthcloud.de/downloads/latest/bwhc-frontend.zip) wich might be outdated.
+Currently frontend release file will be downloaded from [https://bwhealthcloud.de](https://bwhealthcloud.de/downloads/latest/bwhc-frontend.zip) which might be outdated.
 
-Latest release files are available from [https://ibmi-intra.cs.uni-tuebingen.de](https://ibmi-intra.cs.uni-tuebingen.de/display/ZPM/bwHC+Prototype+Release+Notes)
+Latest release files are available from [https://ibmi-intra.cs.uni-tuebingen.de](https://ibmi-intra.cs.uni-tuebingen.de/display/ZPM/bwHC+Prototype+Release+Notes) - login required.
 
 ## Build images
 

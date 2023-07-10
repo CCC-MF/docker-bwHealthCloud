@@ -2,6 +2,19 @@
 
 The purpose of this project is to provide docker images for [bwHealthCloud](https://www.telemedbw.de/projekte/bwhealthcloud).
 
+## Deprecation and public archive
+
+The purpose of this project was to provide basic docker support to bwHC packages.
+
+Since there is a usable [pull request](https://github.com/KohlbacherLab/bwhc-frontend/pull/1)
+and [docker image](https://github.com/CCC-MF/bwhc-frontend/pkgs/container/bwhc-frontend)
+for frontend and some work is done based on this projects Dockerfile to create backend images,
+this project will be deprecated and become a public archive, soon.
+
+For frontend docker images, see: https://github.com/CCC-MF/bwhc-frontend/tree/docker-dev
+
+For backend docker images, see: https://github.com/KohlbacherLab/bwHC-REST-API-Gateway
+
 ## First steps
 
 Make sure that latest release files are in the project directory, as docker build will pick them up without downloading them.

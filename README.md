@@ -12,9 +12,11 @@ for frontend and some work is done based on this projects Dockerfile to create b
 this project will be deprecated and become a public archive, soon.
 
 ### Frontend
-For frontend docker images, see: https://github.com/CCC-MF/bwhc-frontend/tree/docker-dev
+For latest frontend docker images, see: https://github.com/CCC-MF/bwhc-frontend/tree/docker-dev. Images will be build from `docker-dev` branch and rebased on current https://github.com/KohlbacherLab/bwhc-frontend. This branch is intended to provide Dockerfile and workflow for automated builds.
 
-Images will be build from `docker-dev` branch and rebased on current https://github.com/KohlbacherLab/bwhc-frontend.
+**Latest build might cause issues** with older backend releases.
+
+See https://github.com/orgs/KohlbacherLab/packages?repo_name=bwhc-frontend for official provided images of older releases.
 
 ### Backend
 For backend docker images, see: https://github.com/KohlbacherLab/bwHC-REST-API-Gateway

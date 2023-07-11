@@ -6,39 +6,41 @@ version: '3.7'
 #         external: true
 
 services:
-
-    frontend:
-        build:
-            context: .
-            dockerfile: Frontend.Dockerfile
-            args:
-                NUXT_HOST: 0.0.0.0
-                NUXT_PORT: 3000
-                BACKEND_PROTOCOL: http
-                BACKEND_HOSTNAME: localhost
-                BACKEND_PORT: 9000
-        environment:
-            BACKEND_PROTOCOL: http
-            BACKEND_HOSTNAME: localhost
-            BACKEND_PORT: 9000
-
-    backend:
-        build:
-            context: .
-            dockerfile: Backend.Dockerfile
-            args:
-                BWHC_BASE_DIR: /bwhc-backend
-        environment:
-            APPLICATION_SECRET: mydummyapplicationsecret12345678
-            ZPM_SITE: http://zpm.example.com
-        #   PLAY_HTTP_PORT: 9000
-        #   PLAY_HTTP_ADDRESS: 0.0.0.0
-        #
-        # Example: use 'bwhcConnectorConfig.xml' from docker config
-        # configs:
-        #     - source: bwhcConnectorConfig
-        #       target: /bwhc-backend/bwhcConnectorConfig.xml
-        #
-        # Example: mount 'bwhcConnectorConfig.xml' into container
-        # volumes:
-        #     - "./bwhcConnectorConfig.xml:/bwhc-backend/bwhcConnectorConfig.xml:ro
+  frontend:
+    build:
+      context: .
+      dockerfile: Frontend.Dockerfile
+      args:
+        NUXT_HOST: 0.0.0.0
+        NUXT_PORT: 3000
+        BACKEND_PROTOCOL: http
+        BACKEND_HOSTNAME: localhost
+        BACKEND_PORT: 9000
+    environment:
+      BACKEND_PROTOCOL: http
+      BACKEND_HOSTNAME: localhost
+      BACKEND_PORT: 9000
+    ports:
+      - "3000:3000"
+  backend:
+    build:
+      context: .
+      dockerfile: Backend.Dockerfile
+      args:
+        BWHC_BASE_DIR: /bwhc-backend
+    environment:
+      APPLICATION_SECRET: mydummyapplicationsecret12345678
+      ZPM_SITE: http://zpm.example.com
+    ports:
+      - "9000:9000"
+    #   PLAY_HTTP_PORT: 9000
+    #   PLAY_HTTP_ADDRESS: 0.0.0.0
+    #
+    # Example: use 'bwhcConnectorConfig.xml' from docker config
+    # configs:
+    #     - source: bwhcConnectorConfig
+    #       target: /bwhc-backend/bwhcConnectorConfig.xml
+    #
+    # Example: mount 'bwhcConnectorConfig.xml' into container
+    # volumes:
+    #     - "./bwhcConnectorConfig.xml:/bwhc-backend/bwhcConnectorConfig.xml:ro

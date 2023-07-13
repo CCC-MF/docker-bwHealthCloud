@@ -19,7 +19,7 @@ For latest frontend docker images, see: https://github.com/CCC-MF/bwhc-frontend/
 See https://github.com/orgs/KohlbacherLab/packages?repo_name=bwhc-frontend for official provided images of older releases.
 
 ### Backend
-For backend docker images, see: https://github.com/KohlbacherLab/bwHC-REST-API-Gateway
+For backend docker images, see: https://github.com/KohlbacherLab/bwhc-backend/tree/main/docker
 
 ## First steps
 
